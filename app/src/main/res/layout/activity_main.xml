@@ -1,31 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#512323"
+    android:background="@color/cardview_dark_background"
+    android:orientation="vertical"
     android:padding="40dp"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="@string/result"
-        android:textColor="@color/white"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
 
     <EditText
         android:id="@+id/editTextText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:background="#fff"
         android:ems="10"
@@ -37,16 +23,12 @@
         android:textAllCaps="false"
         android:textColorHint="#78909C"
         android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="LabelFor,TouchTargetSizeCheck" />
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editTextText2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:background="#fff"
         android:ems="10"
@@ -59,79 +41,116 @@
         android:textAllCaps="false"
         android:textColorHint="#78909C"
         android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText"
-        tools:ignore="Autofill,LabelFor" />
+        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btAdd"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="#fff"
-        android:padding="10dp"
-        android:text="@string/btn_plus"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="#039BE5"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/result"
+        android:textColor="@color/white"
+        android:textSize="80sp"
+        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btSubtract"
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        style="?android:attr/buttonBarStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="#fff"
-        android:padding="10dp"
-        android:text="@string/btn_minus"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="#039BE5"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btAdd" />
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
-    <Button
-        android:id="@+id/btMultiply"
+        <Button
+            android:id="@+id/btAdd"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:text="@string/btn_plus"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#039BE5"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btSubtract"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="@string/btn_minus"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#039BE5"
+            android:textSize="40sp"
+            android:textStyle="bold"
+
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        style="?android:attr/buttonBarStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="#fff"
-        android:padding="10dp"
-        android:text="@string/btn_multiplication"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="#039BE5"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btSubtract" />
+        android:orientation="horizontal"
+        android:weightSum="2">
 
-    <Button
-        android:id="@+id/btDriver"
+        <Button
+            android:id="@+id/btMultiply"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="@string/btn_multiplication"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#039BE5"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btDriver"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:text="@string/btn_divide"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#039BE5"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/credit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         android:layout_marginTop="20dp"
-        android:background="#fff"
-        android:padding="10dp"
-        android:text="@string/btn_divide"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="#039BE5"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btMultiply" />
+        android:gravity="center_horizontal|bottom"
+        android:text="@string/credit"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:textStyle="bold" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
